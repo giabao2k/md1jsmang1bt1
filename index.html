@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b1</title>
+</head>
+<body>
+    <h1>Sample Screen:</h1>
+    <hr width="23%" align = 'left'>
+    <input id="so" type="text">
+    <button id="add" onclick="themvao()">Add</button>
+    <button id="display" onclick="inra()">Display</button>
+    <p id="o"></p>
+</body>
+</html>
+<script>
+    let i = 0;
+    let mang = [];
+    function themvao(){
+        mang[i] = document.getElementById("so").value;
+        //document.write(mang[i] + '<br>');
+        document.getElementById("so").value = "";
+        i++;
+    }
+    function inra(){
+        let a="";
+        for(let i = 0; i < mang.length; i++){
+            a+=`element ${i} = ${mang[i]} <br>`;
+           // document.write(`element ${i} = ${mang[i]} <br>`);
+        }
+        document.getElementById("o").innerHTML=a;
+    } 
+</script>
